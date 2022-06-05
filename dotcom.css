@@ -1,0 +1,184 @@
+@font-face {
+  font-family: 'Archivo', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap')
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes linkhover {
+  from {color: inherit;}
+  to {color: gray;}
+}
+
+.header {
+  padding: 10vw;
+  background-image: url(../images/bonneville.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Archivo', sans-serif;
+}
+
+body {
+  font-family: 'Archivo', sans-serif;
+  color: white;
+}
+
+h1 {
+  color: white;
+  background-color: black;
+  font-size: 5vw;
+  text-align: left;
+  padding: 2.5vw;
+  display: inline;
+}
+
+nav ul {
+  font-size: 1.5vw;
+  margin-top: 0;
+  padding: 1vw;
+  background-color: black;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  animation-name: linkhover;
+  animation-duration: 0.25s;
+  color: gray;
+}
+
+.headline {
+  font-size: 2.5vw;
+  font-weight: bold;
+  padding: 2vw;
+}
+
+
+.container {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.main {
+  padding-right: 1vw;
+  flex: 2 1 auto;
+}
+
+.post {
+  padding-top: 2vw;
+  padding-bottom: 1vw;
+  margin-bottom: 1vw;
+  background-color: black;
+}
+
+.postpreview {
+  padding-left: 2vw;
+  margin-right: 2vw;
+  margin-top: 1vw;
+  display: flex;
+  align-items: flex-start;
+  max-height: 20vw;
+}
+
+.featured {
+  flex: 1 1 auto;
+}
+
+ img.featured {
+   max-height: 20vw;
+}
+
+img.featured:hover {
+
+}
+
+.postslug {
+  margin-top: 0;
+  flex: 3 1 auto;
+  padding-left: 1vw;
+  font-size: 1.5vw;
+  max-height: 20vw;
+  overflow: hidden;
+}
+
+.filedunder {
+  margin-left: 2vw;
+  margin-right: 2vw;
+  display: flex;
+  flex-direction: row;
+  font-size: 1vw;
+}
+
+.filedunder p {
+  flex: 1 1 auto;
+}
+
+ol.tagbox {
+  flex: 20 1 auto;
+
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pubdatebox {
+  margin-left: 2vw;
+  font-size: 1vw;
+}
+
+.pubdate {
+  margin-top: 0;
+}
+
+.sidebar {
+  padding: 1vw;
+  flex: 1 0 10vw;
+  background-color: black;
+  flex-wrap: nowrap;
+}
+
+.tags {
+  max-height: 25vw;
+  overflow: scroll;
+  line-height: 1.5;
+}
+
+ol.tags {
+  list-style-type: none;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.archives {
+  max-height: 25vw;
+  overflow: scroll;
+  line-height: 1.5;
+}
+
+ol.archives {
+  list-style-type: none;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.languages {
+line-height: 1.5;
+}
+
+ul.languages {
+  list-style-type: none;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
