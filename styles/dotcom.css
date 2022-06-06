@@ -54,10 +54,12 @@ a:hover {
   color: gray;
 }
 
-.headline {
+a.headline {
   font-size: 2.5vw;
   font-weight: bold;
-  padding: 2vw;
+  padding: 1vw;
+  padding-left: 2vw;
+  display: inline-block;
 }
 
 
