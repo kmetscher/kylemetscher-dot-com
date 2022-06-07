@@ -11,6 +11,6 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 // Uncomment below to turn on flag
-// else {
-//   echo '<h1>mysql connected</h1>';
-// }
+//else {
+//echo '<h1>mysql connected</h1>';
+//} ?>
