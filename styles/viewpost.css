@@ -128,7 +128,7 @@ ol.tagbox {
   justify-content: space-between;
 }
 
-ol a {
+#posttagbox {
   font-size: 1.5vw;
   align-self: center;
 }
