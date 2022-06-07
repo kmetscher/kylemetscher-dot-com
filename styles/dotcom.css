@@ -112,6 +112,13 @@ img.featured:hover {
   overflow: hidden;
 }
 
+#tagline {
+  background-color: black;
+  padding: 2vw;
+  margin-top: 0;
+  font-size: 3vw;
+}
+
 .filedunder {
   margin-left: 2vw;
   margin-right: 2vw;
