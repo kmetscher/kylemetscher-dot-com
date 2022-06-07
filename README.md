@@ -9,12 +9,11 @@ Originally set out with object-oriented paradigm in mind, abandoned in favor of 
 
 Current challenges:
 
-Fetching posts and tags from the database to display on index never seems to work with the while-loop method I have seen described in many places elsewhere. I am currently crutching on a rather inefficient method of exploding a returned row into arrays of individual values to be concatenated into the post previews and tagbox with a for loop. For index, this is easy, because I only ever want ten posts up front. For tags, this is based on using the array count function to use against the for loop index. It seems inefficient and makes me feel stupid!
+Smooth sailing atm~
 
 Future plans:
 
 Moving to PDO for fetches.
-Making the fetch process for posts and tags more efficient.
 Writing postview.php page so people can actually read posts.
 Scripting the top header to become a slow slideshow of other photographs I've taken.
 Sorting posts by tags via tagview.php page.
