@@ -17,8 +17,6 @@ Moving to PDO for fetches.
 
 Scripting the top header to become a slow slideshow of other photographs I've taken.
 
-Sorting posts by tags via tagview.php page.
-
 Sorting posts by month via archiveview.php page and archive sidebar.
 
 Making contact page actually do something.
