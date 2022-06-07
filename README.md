@@ -3,7 +3,24 @@
 Contains the HTML, style sheets, and server-side files needed for my personal website. The site will be a blog where I upload posts about vehicles I work
 on at my current job, movie and music reviews, random thoughts, and updates on the site itself and other projects.
 
-The website is currently in infancy. My plan is to run it on an EC2 instance with Apache installed, using PHP to dynamically generate pages for individual
-posts and preview objects on the site home page as I upload posts. This is my first true foray into web development.
-
 Test posts adapted from r/copypasta.
+
+Originally set out with object-oriented paradigm in mind, abandoned in favor of functional-procedural.
+
+Current challenges:
+
+Fetching posts and tags from the database to display on index never seems to work with the while-loop method I have seen described in many places elsewhere. I am currently crutching on a rather inefficient method of exploding a returned row into arrays of individual values to be concatenated into the post previews and tagbox with a for loop. For index, this is easy, because I only ever want ten posts up front. For tags, this is based on using the array count function to use against the for loop index. It seems inefficient and makes me feel stupid!
+
+Future plans:
+
+Moving to PDO for fetches.
+Making the fetch process for posts and tags more efficient.
+Writing postview.php page so people can actually read posts.
+Scripting the top header to become a slow slideshow of other photographs I've taken.
+Sorting posts by tags via tagview.php page.
+Sorting posts by month via archiveview.php page and archive sidebar.
+Making contact page actually do something.
+Allowing a user to switch the entire interface to their language via the language sidebar option.
+Functionalize PHP procedures and utilize scripts folder
+Evaluate possibility of object-oriented paradigm
+Host on Amazon EC2 instance with LAMP stack

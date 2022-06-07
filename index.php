@@ -12,54 +12,42 @@
     <?php require_once('includes/headernav.php')?>
     <?php require_once('includes/connect.php')?>
 
-    <?php // Get test post
-    $query = "SELECT title, slug, image, date FROM blog_posts WHERE id=4";
-    $answer = $conn->query($query);
-    $row = mysqli_fetch_assoc($answer);
-    ?>
-
     <div class="container">
       <div class="main">
-          <?php
-        echo '<div class="post">';
-          echo '<a class="headline" href="#">'.$row['title'].'</a>';
-          echo '<div class="postpreview">';
-            echo '<a href="#"><img class="featured" src="'.$row['image'].'"></a>';
-            echo '<p class="postslug">'.$row['slug'].'</p>';
-          echo '</div>';
-          ?>
 
-          <?php // Use a left join on tags and post_tags table to create an array
-                // of IDs to be linked to and tag names to get displayed in tagbox
-          $tagNames = array(); // for people
-          $tagIDs = array(); // for machines
-          $tagQuery = "SELECT tags.* FROM post_tags LEFT JOIN (tags) ON (post_tags.tag_id = tags.id) WHERE post_tags.post_id=4 ORDER BY name ASC";
-          $tagAnswer = $conn->query($tagQuery);
-          while($tagRow = mysqli_fetch_assoc($tagAnswer)) {
-            array_push($tagNames, $tagRow['name']);
-            array_push($tagIDs,   $tagRow['id']);
-          }
-          $numTags = count($tagIDs); // there has really got to be a better way to do this shit
-          ?>
+          <?php // Fetch the last ten posts based on id
+          $postsQuery = "SELECT id, title, slug, image, date FROM blog_posts ORDER BY id DESC";
+          $postsAnswer = $conn->query($postsQuery); ?>
 
-          <?php
-          echo '<div class="filedunder">';
-            echo '<p>Filed under:</p>';
-            echo '<ol class="tagbox">'; ?>
+          <?php while($postRow = mysqli_fetch_assoc($postsAnswer)) { // for each row fetched, echo out a post div with the values in that row
+            $crutchID = $postRow['id']; // i don't feel like preparing statements right now, see tag query
 
-              <?php // use the number of tags in a post to index a for loop, matching tag IDs to their names
-              for ($i=0; $i < $numTags; $i++) { // there has to be a better way to do this. i and j loop?
-                echo '<a href="viewtag.php?'.$tagIDs[$i].'"><li>'.$tagNames[$i].'</li></a>';
-              }
-              ?>
+            echo '<div class="post">';
+              echo '<a class="headline" href="viewpost.php?'.$postRow['id'].'">'.$postRow['title'].'</a>';
+              echo '<div class="postpreview">';
+                echo '<a href="viewpost.php?'.$postRow['id'].'"><img class="featured" src="'.$postRow['image'].'"></a>';
+                echo '<p class="postslug">'.$postRow['slug'].'</p>';
+              echo '</div>';
 
-              <?php
-            echo '</ol>';
-          echo '</div>';
-          echo '<div class="pubdatebox">';
-            echo '<p class="pubdate">Published April 20, 1969</p>';
-          echo '</div>';
-        echo '</div>';
+              echo '<div class="filedunder">';
+                echo '<p>Filed under:</p>';
+                echo '<ol class="tagbox">';
+
+                // fetch tags via left join on post_tags and tags tables with passed post ID
+                $tagQuery = "SELECT tags.* FROM post_tags LEFT JOIN (tags) ON (post_tags.tag_id = tags.id) WHERE post_tags.post_id=$crutchID ORDER BY name ASC";
+                $tagAnswer = $conn->query($tagQuery);
+
+                while($tagRow = mysqli_fetch_assoc($tagAnswer)) {
+                  echo '<a href="viewtag.php?'.$tagRow['id'].'"><li>'.$tagRow['name'].'</li></a>';
+                }
+                echo '</ol>';
+              echo '</div>';
+              echo '<div class="pubdatebox">';
+                echo '<p class="pubdate">Published '.$postRow['date'].'</p>';
+              echo '</div>';
+            echo '</div>';
+
+         }
         ?>
 
       </div>
