@@ -11,7 +11,7 @@ class blogPost {
   public $postLanguage
 
   function __construct($id, $title, $body, $slug, $image, $date, $language) {
-    // Sets blog post up with simple passed arguments
+    // Sets blog post up with simple passed arguments -- will likely need changed
     this->$postID       = $id;
     this->$postTitle    = $title;
     this->$postBody     = $body;
@@ -19,7 +19,7 @@ class blogPost {
     this->$postImage    = $image;
     this->$postDate     = $date;
     this->$postLanguage = $language;
-    // Creates arrays of tag names and IDs by querying tags and post_tags tables 
+    // Creates arrays of tag names and IDs by querying tags and post_tags tables using a left join
     $sql = "SELECT tags.* FROM post_tags LEFT JOIN (tags) ON (post_tags.tag_id = tags.id) WHERE post_tags.post_id = " . $id);
     $answer = mysqli_query($sql);
 

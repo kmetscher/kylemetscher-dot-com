@@ -33,6 +33,21 @@ h1 {
   display: inline;
 }
 
+h2 {
+  font-size: 2.5vw;
+  background-color: black;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 1.5vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
 nav ul {
   font-size: 1.5vw;
   margin-top: 0;
@@ -54,15 +69,6 @@ a:hover {
   color: gray;
 }
 
-a.headline {
-  font-size: 2.5vw;
-  font-weight: bold;
-  padding: 1vw;
-  padding-left: 2vw;
-  display: inline-block;
-}
-
-
 .container {
   padding-left: 10vw;
   padding-right: 10vw;
@@ -75,41 +81,29 @@ a.headline {
   flex: 2 1 auto;
 }
 
-.post {
+.blogpost {
   padding-top: 2vw;
   padding-bottom: 1vw;
   margin-bottom: 1vw;
   background-color: black;
-}
-
-.postpreview {
-  padding-left: 2vw;
-  margin-right: 2vw;
-  margin-top: 1vw;
   display: flex;
-  align-items: flex-start;
-  max-height: 20vw;
+  flex-direction: column;
 }
 
-.featured {
-  flex: 1 1 auto;
+img.blogpost {
+  object-fit: contain;
+  max-height: 35vw;
+  max-width: 100%;
+  padding: 2vw;
+  padding-bottom: 1vw;
+  padding-top: 1vw;
 }
 
- img.featured {
-   max-height: 20vw;
-}
-
-img.featured:hover {
-
-}
-
-.postslug {
+.caption {
   margin-top: 0;
-  flex: 3 1 auto;
-  padding-left: 1vw;
-  font-size: 1.5vw;
-  max-height: 20vw;
-  overflow: hidden;
+  font-size: 1vw;
+  margin-left: 2vw;
+  margin-bottom: 2vw;
 }
 
 .filedunder {
@@ -117,11 +111,13 @@ img.featured:hover {
   margin-right: 2vw;
   display: flex;
   flex-direction: row;
-  font-size: 1vw;
+  font-size: 1.5vw;
 }
 
 .filedunder p {
+  margin: 1vw;
   flex: 1 1 auto;
+  align-self: center;
 }
 
 ol.tagbox {
@@ -132,8 +128,13 @@ ol.tagbox {
   justify-content: space-between;
 }
 
+ol a {
+  font-size: 1.5vw;
+  align-self: center;
+}
+
 .pubdatebox {
-  margin-left: 2vw;
+  margin-left: 1vw;
   font-size: 1vw;
 }
 
