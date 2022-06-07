@@ -14,12 +14,19 @@ Smooth sailing atm~
 Future plans:
 
 Moving to PDO for fetches.
-Writing postview.php page so people can actually read posts.
+
 Scripting the top header to become a slow slideshow of other photographs I've taken.
+
 Sorting posts by tags via tagview.php page.
+
 Sorting posts by month via archiveview.php page and archive sidebar.
+
 Making contact page actually do something.
-Allowing a user to switch the entire interface to their language via the language sidebar option.
-Functionalize PHP procedures and utilize scripts folder
-Evaluate possibility of object-oriented paradigm
-Host on Amazon EC2 instance with LAMP stack
+
+Allowing a user to switch the entire interface to their language via the language sidebar option, as well as populate index.php with most recent posts in their chosen language.
+
+Functionalize PHP procedures and utilize scripts folder.
+
+Evaluate possibility of object-oriented paradigm.
+
+Host on Amazon EC2 instance with LAMP stack.
