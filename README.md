@@ -9,7 +9,7 @@ Originally set out with object-oriented paradigm in mind, abandoned in favor of 
 
 Current challenges:
 
-Smooth sailing atm~
+Parsing mySQL returned date on blog post records to display publish date in European format (e.g. 07 June 2022) and for use in archiving by month
 
 Future plans:
 
@@ -23,6 +23,10 @@ Sorting posts by month via archiveview.php page and archive sidebar.
 
 Making contact page actually do something.
 
+Create mobile responsive site pages
+
+Script a post upload function/method to insert a post into blog_posts table, tags into tags table while checking for duplication, and post id and tag ids into post_tags table
+
 Allowing a user to switch the entire interface to their language via the language sidebar option, as well as populate index.php with most recent posts in their chosen language.
 
 Functionalize PHP procedures and utilize scripts folder.
@@ -30,3 +34,5 @@ Functionalize PHP procedures and utilize scripts folder.
 Evaluate possibility of object-oriented paradigm.
 
 Host on Amazon EC2 instance with LAMP stack.
+
+Actually write blog posts!
