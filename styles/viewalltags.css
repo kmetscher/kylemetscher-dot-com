@@ -1,0 +1,35 @@
+@import url("sitewide.css");
+
+h2 {
+  background-color: black;
+  padding: 2vw;
+  margin-top: 0;
+  margin-bottom: 1vw;
+}
+
+#taglist {
+  background-color: black;
+  padding: 2vw;
+  margin-bottom: 2vw;
+  margin-top: 0;
+}
+
+#taglist ol {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+  line-height: 1.5;
+  margin-bottom: 1vw;
+  margin-top: 0;
+}
+
+#taglist li {
+  margin: 3vw;
+}
+
+#taglist a {
+  text-decoration: underline;
+}

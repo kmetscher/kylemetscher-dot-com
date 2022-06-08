@@ -1,0 +1,197 @@
+@font-face {
+  font-family: 'Archivo', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap')
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes linkhover {
+  from {color: inherit;}
+  to {color: gray;}
+}
+
+.header {
+  padding: 10vw;
+  background-image: url(../images/bonneville.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Archivo', sans-serif;
+}
+
+body {
+  font-family: 'Archivo', sans-serif;
+  color: white;
+}
+
+h1 {
+  color: white;
+  background-color: black;
+  font-size: 5vw;
+  text-align: left;
+  padding: 2.5vw;
+  display: inline;
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    color: white;
+    background-color: black;
+    font-size: 6vw;
+    text-align: left;
+    padding: 2.5vw;
+    display: inline;
+  }
+}
+
+nav ul {
+  font-size: 1.5vw;
+  margin-top: 0;
+  padding: 1vw;
+  background-color: black;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 800px) {
+  nav ul {
+    font-size: 4vw;
+    margin-top: 0;
+    margin-bottom: 1vw;
+    padding: 2vw;
+    background-color: black;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.container {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.main {
+  padding-right: 1vw;
+  flex: 2 1 auto;
+}
+
+@media screen and (max-width: 800px) {
+  .main {
+    padding-right: 0;
+    flex: 2 1 auto;
+  }
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  animation-name: linkhover;
+  animation-duration: 0.25s;
+  color: gray;
+}
+
+.sidebar {
+  padding: 1vw;
+  flex: 1 0 10vw;
+  background-color: black;
+  flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 800px) {
+  .sidebar {
+    padding: 1vw;
+    background-color: black;
+    flex-wrap: nowrap;
+  }
+  .sidebar h3 {
+    margin-left: 2vw;
+    margin-bottom: 0;
+  }
+}
+
+.tags {
+  max-height: 25vw;
+  overflow: scroll;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 800px) {
+  .tags {
+    display: none;
+  }
+}
+
+ol.tags {
+  list-style-type: none;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+  ol.tags {
+    display: none;
+    list-style-type: none;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+}
+
+.archives {
+  max-height: 25vw;
+  overflow: scroll;
+  line-height: 1.5;
+}
+
+ol.archives {
+  list-style-type: none;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.languages {
+line-height: 1.5;
+}
+
+ul.languages {
+  list-style-type: none;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+  ul.languages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style-type: none;
+    list-style: none;
+    padding-left: 2vw;
+    margin: 0;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+  }
+  ul.languages li {
+    margin-right: 2vw;
+  }
+}

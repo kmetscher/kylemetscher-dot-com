@@ -1,37 +1,4 @@
-@font-face {
-  font-family: 'Archivo', sans-serif;
-  src: url('https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap')
-  font-weight: normal;
-  font-style: normal;
-}
-
-@keyframes linkhover {
-  from {color: inherit;}
-  to {color: gray;}
-}
-
-.header {
-  padding: 10vw;
-  background-image: url(../images/bonneville.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  font-family: 'Archivo', sans-serif;
-}
-
-body {
-  font-family: 'Archivo', sans-serif;
-  color: white;
-}
-
-h1 {
-  color: white;
-  background-color: black;
-  font-size: 5vw;
-  text-align: left;
-  padding: 2.5vw;
-  display: inline;
-}
+@import url("sitewide.css");
 
 h2 {
   font-size: 2.5vw;
@@ -48,39 +15,6 @@ p {
   margin-right: 2vw;
 }
 
-nav ul {
-  font-size: 1.5vw;
-  margin-top: 0;
-  padding: 1vw;
-  background-color: black;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-}
-
-a:link, a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:hover {
-  animation-name: linkhover;
-  animation-duration: 0.25s;
-  color: gray;
-}
-
-.container {
-  padding-left: 10vw;
-  padding-right: 10vw;
-  display: flex;
-  flex-direction: row;
-}
-
-.main {
-  padding-right: 1vw;
-  flex: 2 1 auto;
-}
-
 .about {
   padding-top: 2vw;
   padding-bottom: 1vw;
@@ -88,6 +22,10 @@ a:hover {
   background-color: black;
   display: flex;
   flex-direction: column;
+}
+
+.about a {
+  text-decoration: underline;
 }
 
 img.about {
@@ -106,46 +44,44 @@ img.about {
   margin-bottom: 2vw;
 }
 
-.sidebar {
-  padding: 1vw;
-  flex: 1 0 10vw;
-  background-color: black;
-  flex-wrap: nowrap;
-}
+@media screen and (max-width: 800px) {
+  h2 {
+    font-size: 5vw;
+    background-color: black;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
-.tags {
-  max-height: 25vw;
-  overflow: scroll;
-  line-height: 1.5;
-}
+  p {
+    font-size: 3.5vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
 
-ol.tags {
-  list-style-type: none;
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
+  .about {
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+    margin-bottom: 1vw;
+    background-color: black;
+  }
 
-.archives {
-  max-height: 25vw;
-  overflow: scroll;
-  line-height: 1.5;
-}
+  img.about {
+    padding: 3vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    display: block;
+    object-fit: contain;
+    max-height: none;
+    border: none;
+  }
 
-ol.archives {
-  list-style-type: none;
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-.languages {
-line-height: 1.5;
-}
-
-ul.languages {
-  list-style-type: none;
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
+  .caption {
+    align-self: center;
+    margin-top: 0;
+    font-size: 3vw;
+    margin-left: 3vw;
+    margin-bottom: 2vw;
+  }
 }
