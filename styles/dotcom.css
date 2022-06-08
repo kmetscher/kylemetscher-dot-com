@@ -1,58 +1,4 @@
-@font-face {
-  font-family: 'Archivo', sans-serif;
-  src: url('https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap')
-  font-weight: normal;
-  font-style: normal;
-}
-
-@keyframes linkhover {
-  from {color: inherit;}
-  to {color: gray;}
-}
-
-.header {
-  padding: 10vw;
-  background-image: url(../images/bonneville.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  font-family: 'Archivo', sans-serif;
-}
-
-body {
-  font-family: 'Archivo', sans-serif;
-  color: white;
-}
-
-h1 {
-  color: white;
-  background-color: black;
-  font-size: 5vw;
-  text-align: left;
-  padding: 2.5vw;
-  display: inline;
-}
-
-nav ul {
-  font-size: 1.5vw;
-  margin-top: 0;
-  padding: 1vw;
-  background-color: black;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-}
-
-a:link, a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:hover {
-  animation-name: linkhover;
-  animation-duration: 0.25s;
-  color: gray;
-}
+@import url("sitewide.css");
 
 a.headline {
   font-size: 2.5vw;
@@ -60,19 +6,6 @@ a.headline {
   padding: 1vw;
   padding-left: 2vw;
   display: inline-block;
-}
-
-
-.container {
-  padding-left: 10vw;
-  padding-right: 10vw;
-  display: flex;
-  flex-direction: row;
-}
-
-.main {
-  padding-right: 1vw;
-  flex: 2 1 auto;
 }
 
 .post {
@@ -148,46 +81,90 @@ ol.tagbox {
   margin-top: 0;
 }
 
-.sidebar {
-  padding: 1vw;
-  flex: 1 0 10vw;
-  background-color: black;
-  flex-wrap: nowrap;
-}
+@media screen and (max-width: 800px) {
+  a.headline {
+    font-size: 5vw;
+    font-weight: bold;
+    padding: 1vw;
+    padding-left: 3vw;
+    display: inline-block;
+  }
 
-.tags {
-  max-height: 25vw;
-  overflow: scroll;
-  line-height: 1.5;
-}
+  .post {
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+    margin-bottom: 1vw;
+    background-color: black;
+  }
 
-ol.tags {
-  list-style-type: none;
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
+  .postpreview {
+    padding-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 2vw;
+    display: flex;
+    align-items: flex-start;
+    max-height: 40vw;
+  }
 
-.archives {
-  max-height: 25vw;
-  overflow: scroll;
-  line-height: 1.5;
-}
+  .featured {
+    flex: 1 2 1;
+  }
 
-ol.archives {
-  list-style-type: none;
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
+   img.featured {
+     max-height: 30vw;
+  }
 
-.languages {
-line-height: 1.5;
-}
+  img.featured:hover {
 
-ul.languages {
-  list-style-type: none;
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
+  }
+
+  .postslug {
+    margin-top: 0;
+    flex: 4 1 2;
+    padding-left: 2vw;
+    font-size: 3.5vw;
+    max-height: 30vw;
+    overflow: hidden;
+  }
+
+  #tagline {
+    background-color: black;
+    padding: 3vw;
+    margin-top: 0;
+    margin-bottom: 1vw;
+    font-size: 5vw;
+  }
+
+  .filedunder {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    display: block;
+    font-size: 3vw;
+  }
+
+  .filedunder p {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+
+  ol.tagbox {
+    padding-left: 0;
+    margin-top: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ol.tagbox a {
+    text-decoration: underline;
+  }
+
+  .pubdatebox {
+    margin-left: 3vw;
+    font-size: 3vw;
+  }
+
+  .pubdate {
+    margin-top: 0;
+  }
 }

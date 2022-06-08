@@ -7,18 +7,18 @@ $sideTagsAnswer = $conn->query($sideTagsQuery);
 
 <?php
 echo '<div class="sidebar">';
-    echo '<h3>Tags</h3>';
+    echo '<a href="viewalltags.php"><h3>Tags</h3></a>';
     echo '<div class="tags">';
       echo '<ol class="tags">';
 
       // echo an anchor for each row returned by associative fetch
       while($sideTagsRow = mysqli_fetch_assoc($sideTagsAnswer)) {
         echo '<a href="viewtag.php?'.$sideTagsRow['id'].'"><li>'.$sideTagsRow['name'].'</li></a>';
-      } // nigh identical to post preview filedunder 
+      } // nigh identical to post preview filedunder
 
       echo '</ol>';
     echo '</div>';
-    echo '<h3>Archives</h3>';
+    echo '<h3><a href="#">Archives</a></h3>';
     echo '<div class="archives">';
       echo '<ol class="archives">';
       echo '</ol>';
