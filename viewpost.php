@@ -29,7 +29,7 @@
         <div class="blogpost">
           <?php echo '<h2>'.$viewPost['title'].'</h2>';
                 echo '<img class="blogpost" src="'.$viewPost['image'].'">';
-                echo '<p>'.$viewPost['body'].'</p>';
+                echo "{$viewPost['body']}";
           ?>
         <div class="filedunder">
           <p>Filed under:</p>
