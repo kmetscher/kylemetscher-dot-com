@@ -52,7 +52,10 @@
                   echo '</ol>';
                 echo '</div>';
                 echo '<div class="pubdatebox">';
-                  echo '<p class="pubdate">Published '.$postRow['date'].'</p>';
+                $postDate = $postRow['date'];
+                $unixDate = strtotime($postDate);
+                $formattedDate = date('j F Y', $unixDate);
+                  echo '<p class="pubdate">Published '.$formattedDate.'</p>';
                 echo '</div>';
               echo '</div>';
             }

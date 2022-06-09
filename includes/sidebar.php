@@ -5,6 +5,11 @@ $sideTagsQuery = "SELECT * FROM tags ORDER BY name ASC";
 $sideTagsAnswer = $conn->query($sideTagsQuery);
 ?>
 
+<?php  // fetch all pubdates in the blog_posts table by recency
+$archiveQuery = "SELECT date FROM blog_posts ORDER BY date DESC";
+$archiveAnswer = $conn->query($archiveQuery);
+?>
+
 <?php
 echo '<div class="sidebar">';
     echo '<a href="viewalltags.php"><h3>Tags</h3></a>';

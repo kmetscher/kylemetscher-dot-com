@@ -35,7 +35,12 @@
           </ol>
         </div>
           <div class="pubdatebox">
-            <?php echo '<p class="pubdate">Published '.$viewPost['date'].'</p>' ?>
+            <?php
+            $postDate = $viewPost['date'];
+            $unixDate = strtotime($postDate);
+            $formattedDate = date('j F Y', $unixDate);
+            echo '<p class="pubdate">Published '.$formattedDate.'</p>' 
+            ?>
           </div>
         </div>
       </div>
