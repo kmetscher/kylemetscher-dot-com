@@ -21,6 +21,9 @@
 
           <?php while($postRow = mysqli_fetch_assoc($postsAnswer)) { // for each row fetched, echo out a post div with the values in that row
             $crutchID = $postRow['id']; // i don't feel like preparing statements right now, see tag query
+            $postDate = $postRow['date']; // even lazier, see pubdate
+            $unixDate = strtotime($postDate);
+            $formattedDate = date('j F Y', $unixDate); // i am doing this for a reason i promise
 
             echo '<div class="post">';
               echo '<a class="headline" href="viewpost.php?'.$postRow['id'].'">'.$postRow['title'].'</a>';
@@ -43,7 +46,7 @@
                 echo '</ol>';
               echo '</div>';
               echo '<div class="pubdatebox">';
-                echo '<p class="pubdate">Published '.$postRow['date'].'</p>';
+                echo '<p class="pubdate">Published '.$formattedDate.'</p>';
               echo '</div>';
             echo '</div>';
 

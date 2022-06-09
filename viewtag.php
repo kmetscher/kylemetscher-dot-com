@@ -4,14 +4,20 @@
     <?php require_once('includes/connect.php');
           require_once('includes/headernav.php');
           $viewTagID = htmlspecialchars($_SERVER['QUERY_STRING']);
-          // select posts by ID from the post_tags table where their tag ID matches
-          $viewTagQuery = "SELECT post_id FROM post_tags WHERE tag_id=$viewTagID ORDER BY post_id DESC";
-          $viewTagAnswer = $conn->query($viewTagQuery);
-          // get the name of the tag for the title
-          $tagNameQuery = "SELECT name FROM tags WHERE id=$viewTagID";
-          $tagNameAnswer = $conn->query($tagNameQuery);
-          $tagName = mysqli_fetch_assoc($tagNameAnswer);
-          echo '<title>Filed under '.$tagName['name'].' | Kyle Metscher</title>';
+          // grab all post IDs that match the tag ID in query string
+          $stmtPosts = $conn->prepare("SELECT post_id FROM post_tags WHERE tag_id=? ORDER BY post_id DESC");
+          $stmtPosts->bind_param("i", $viewTagID);
+          $stmtPosts->execute();
+          $viewTagAnswer = $stmtPosts->get_result();
+          // get the tag's name to display in title and header
+          $stmtTag = $conn->prepare("SELECT name FROM tags WHERE id=$viewTagID");
+          $stmtTag->bind_param("i", $viewTagID);
+          $stmtTag->execute();
+          $tagAnswer = $stmtTag->get_result();
+          $tagName = $tagAnswer->fetch_assoc();
+
+          echo '<title>Filed under "'.$tagName['name'].'" | Kyle Metscher</title>';
+          $stmtTag->close();
     ?>
     <meta charset="utf-8">
     <link href="styles/dotcom.css" rel="stylesheet">
@@ -24,7 +30,7 @@
         <?php echo '<h2 id="tagline">Filed under "'.$tagName['name'].'"</h2>'; ?>
           <?php
           // row by row, post IDs
-          while($viewTagRow = mysqli_fetch_assoc($viewTagAnswer)) {
+          while($viewTagRow = $viewTagAnswer->fetch_assoc()) {
             $currentID = $viewTagRow['post_id']; // lazy
             // get the post's preview info via its ID
             $postsQuery = "SELECT title, slug, image, date FROM blog_posts WHERE id=$currentID";
@@ -52,7 +58,10 @@
                   echo '</ol>';
                 echo '</div>';
                 echo '<div class="pubdatebox">';
-                  echo '<p class="pubdate">Published '.$postRow['date'].'</p>';
+                $postDate = $postRow['date'];
+                $unixDate = strtotime($postDate);
+                $formattedDate = date('j F Y', $unixDate);
+                  echo '<p class="pubdate">Published '.$formattedDate.'</p>';
                 echo '</div>';
               echo '</div>';
             }
@@ -61,6 +70,8 @@
 
       </div>
 
-    <?php require_once('includes/sidebar.php')?>
+    <?php require_once('includes/sidebar.php');
+    $stmtPosts->close();
+    ?>
 
   </body>
