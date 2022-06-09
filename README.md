@@ -13,17 +13,13 @@ Parsing mySQL returned date on blog post records to display publish date in Euro
 
 Future plans:
 
-Moving to PDO for fetches.
+Moving to prepared statements for fetches.
 
 Scripting the top header to become a slow slideshow of other photographs I've taken.
-
-Sorting posts by tags via tagview.php page.
 
 Sorting posts by month via archiveview.php page and archive sidebar.
 
 Making contact page actually do something.
-
-Create mobile responsive site pages
 
 Script a post upload function/method to insert a post into blog_posts table, tags into tags table while checking for duplication, and post id and tag ids into post_tags table
 
