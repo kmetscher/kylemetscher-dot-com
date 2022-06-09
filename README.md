@@ -9,11 +9,9 @@ Originally set out with object-oriented paradigm in mind, abandoned in favor of 
 
 Current challenges:
 
-Parsing mySQL returned date on blog post records to display publish date in European format (e.g. 07 June 2022) and for use in archiving by month
+Archiving by month
 
 Future plans:
-
-Moving to prepared statements for fetches.
 
 Scripting the top header to become a slow slideshow of other photographs I've taken.
 
