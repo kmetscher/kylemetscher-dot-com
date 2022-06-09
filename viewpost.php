@@ -4,11 +4,18 @@
     <?php require_once('includes/connect.php');
           require_once('includes/headernav.php');
           $viewPostID = htmlspecialchars($_SERVER['QUERY_STRING']);
-          $viewPostQuery = "SELECT title, body, image, date, language FROM blog_posts WHERE id=$viewPostID";
-          $viewPostAnswer = $conn->query($viewPostQuery);
-          $viewPost = mysqli_fetch_assoc($viewPostAnswer);
-          $postTagsQuery = "SELECT tags.* FROM post_tags LEFT JOIN (tags) ON (post_tags.tag_id = tags.id) WHERE post_tags.post_id=$viewPostID ORDER BY name ASC";
-          $postTagsAnswer = $conn->query($postTagsQuery);
+          // select post with matching ID
+          $stmtView = $conn->prepare("SELECT title, body, image, date, language FROM blog_posts WHERE id=?");
+          $stmtView->bind_param("i", $viewPostID);
+          $stmtView->execute();
+          $viewPostAnswer = $stmtView->get_result();
+          $viewPost = $viewPostAnswer->fetch_assoc();
+          // and grab its tags
+          $stmtTags = $conn->prepare("SELECT tags.* FROM post_tags LEFT JOIN (tags) ON (post_tags.tag_id = tags.id) WHERE post_tags.post_id=? ORDER BY name ASC");
+          $stmtTags->bind_param("i", $viewPostID);
+          $stmtTags->execute();
+          $postTagsAnswer = $stmtTags->get_result();
+
           echo '<title>'.$viewPost['title'].' | Kyle Metscher</title>';
     ?>
     <meta charset="utf-8">
@@ -28,7 +35,7 @@
           <p>Filed under:</p>
           <ol class="tagbox">
             <?php
-            while($postTagsRow = mysqli_fetch_assoc($postTagsAnswer)) {
+            while($postTagsRow = $postTagsAnswer->fetch_assoc()) {
               echo '<a href="viewtag.php?'.$postTagsRow['id'].'"><li>'.$postTagsRow['name'].'</li></a>';
             }
             ?>
@@ -39,7 +46,7 @@
             $postDate = $viewPost['date'];
             $unixDate = strtotime($postDate);
             $formattedDate = date('j F Y', $unixDate);
-            echo '<p class="pubdate">Published '.$formattedDate.'</p>' 
+            echo '<p class="pubdate">Published '.$formattedDate.'</p>'
             ?>
           </div>
         </div>

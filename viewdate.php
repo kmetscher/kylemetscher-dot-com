@@ -6,8 +6,13 @@
           $viewDate = htmlspecialchars($_SERVER['QUERY_STRING']);
           $viewDate = substr_replace($viewDate, '-', 4, 0); // stick a - in the date to match sql format
           // select posts by date from the post_tags table where YYYY-MM-** matches
-          $viewDateQuery = "SELECT id FROM blog_posts WHERE date LIKE '$viewDate%' ORDER BY id DESC";
-          $viewDateAnswer = $conn->query($viewDateQuery);
+          $stmtDate = $conn->prepare("SELECT id FROM blog_posts WHERE date LIKE '?%' ORDER BY id DESC");
+          $stmtDate->bind_param($viewDate);
+          $stmtDate->execute();
+          $viewDateAnswer = $stmtDate->get_result();
+
+          // $viewDateQuery = "SELECT id FROM blog_posts WHERE date LIKE '$viewDate%' ORDER BY id DESC";
+          // $viewDateAnswer = $conn->query($viewDateQuery);
           echo '<title> | Kyle Metscher</title>';
     ?>
     <meta charset="utf-8">
@@ -18,7 +23,7 @@
     <div class="container">
       <div class="main">
         <?php
-        while($monthRow = mysqli_fetch_assoc($viewDateAnswer)) {
+        while($monthRow = $viewDateAnswer->fetch_assoc()) {
           $currentID = $monthRow['id'];
           $postsQuery = "SELECT title, slug, image, date FROM blog_posts WHERE id=$currentID";
           $postsAnswer = $conn->query($postsQuery);
