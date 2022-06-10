@@ -3,9 +3,11 @@
 Contains the HTML, style sheets, and server-side files needed for my personal website. The site will be a blog where I upload posts about vehicles I work
 on at my current job, movie and music reviews, random thoughts, and updates on the site itself and other projects.
 
+Local testing is done via apache2 and mySQL installations on my personal computer.
+
 Test posts adapted from r/copypasta.
 
-Originally set out with object-oriented paradigm in mind, abandoned in favor of functional-procedural.
+Originally set out with object-oriented paradigm in mind, mostly abandoned in favor of functional-procedural. MYSQLi connections and fetches are managed by object.
 
 Current challenges:
 
