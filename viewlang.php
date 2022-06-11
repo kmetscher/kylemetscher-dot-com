@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <link href="styles/dotcom.css?" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap" rel="stylesheet">
+    <?php require_once('includes/connect.php')?>
     <?php $viewLang = htmlspecialchars($_SERVER['QUERY_STRING']);
-      /* switch ($viewLang) {
+      switch ($viewLang) {
       case "en":
       $postsLang = "Posts in English";
       break;
@@ -15,22 +16,21 @@
       case "hu":
       $postsLang = "Magyar nyelvű cikkek";
       break;
-    } */
-    echo '<title>'.$viewLang.' | Kyle Metscher</title>';
-    $escViewLang = substr_replace($viewLang, '\'', 0, 0);
-    $escViewLang = substr_replace($escViewLang, '\'', 4, 0);
-    $stmtLang = $conn->prepare("SELECT id, title, slug, image, date FROM blog_posts WHERE language=? ORDER BY id DESC");
-    $stmtLang->bind_param("s", $viewLang);
-    $stmtLang->execute();
-    $postsAnswer = $stmtLang->get_result();
+    }
+    echo "<title>$postsLang | Kyle Metscher</title>";
     ?>
 
   </head>
 
   <body>
+    <?php $langQuery = "SELECT id, title, slug, image, date FROM blog_posts WHERE language=? ORDER BY id DESC";
+    $stmtLang = $conn->prepare($langQuery);
+    $stmtLang->bind_param("s", $viewLang);
+    $stmtLang->execute();
+    $postsAnswer = $stmtLang->get_result();
+    ?>
 
     <?php require_once('includes/headernav.php')?>
-    <?php require_once('includes/connect.php')?>
 
     <div class="container">
       <div class="main">
