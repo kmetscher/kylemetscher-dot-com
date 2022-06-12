@@ -19,11 +19,11 @@ Archiving by month
 
 Future plans:
 
+Collapse stylesheets
+
 Scripting the top header to become a slow slideshow of other photographs I've taken.
 
 Sorting posts by month via archiveview.php page and archive sidebar.
-
-Making contact page actually do something.
 
 Edit/delete post backend functions
 
