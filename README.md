@@ -9,19 +9,23 @@ Test posts adapted from r/copypasta.
 
 Originally set out with object-oriented paradigm in mind, mostly abandoned in favor of functional-procedural. MYSQLi connections and fetches are managed by object.
 
+Security notes:
+
+POST method querying for viewing posts, by tag, and by language tested with sqlmap.py (https://github.com/sqlmapproject/sqlmap) (https://sqlmap.org/)
+
 Current challenges:
 
 Archiving by month
 
 Future plans:
 
+Collapse stylesheets
+
 Scripting the top header to become a slow slideshow of other photographs I've taken.
 
 Sorting posts by month via archiveview.php page and archive sidebar.
 
-Making contact page actually do something.
-
-Script a post upload function/method to insert a post into blog_posts table, tags into tags table while checking for duplication, and post id and tag ids into post_tags table
+Edit/delete post backend functions
 
 Allowing a user to switch the entire interface to their language via the language sidebar option, as well as populate index.php with most recent posts in their chosen language.
 
@@ -29,6 +33,6 @@ Functionalize PHP procedures and utilize scripts folder.
 
 Evaluate possibility of object-oriented paradigm.
 
-Host on Amazon EC2 instance with LAMP stack.
+Host on Amazon Lightsail instance with LAMP stack.
 
 Actually write blog posts!

@@ -34,7 +34,7 @@
 
     <div class="container">
       <div class="main">
-        <?php echo '<h2>'.$escViewLang.'</h2>'; ?>
+        <?php echo '<h2 id="tagline">'.$postsLang.'</h2>'; ?>
 
           <?php while($postRow = $postsAnswer->fetch_assoc()) {
             $crutchID = $postRow['id'];

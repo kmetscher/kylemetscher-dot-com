@@ -33,7 +33,7 @@ echo '<div class="sidebar">';
       echo '<ul class="languages">';
         echo '<li><a href="viewlang.php?en">English</a></li>';
         echo '<li><a href="viewlang.php?hu">Magyar</a></li>';
-        echo '<li><a href="#">viewlang.php?de</a></li>';
+        echo '<li><a href="viewlang.php?de">Deutsch</a></li>';
       echo '</ul>';
     echo '</div>';
   echo '</div>';

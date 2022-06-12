@@ -13,24 +13,12 @@
       <div class="main">
         <div class="contact">
           <h2>Contact</h2>
-          <div class="form">
-            <form action="#">
-              <h3>Name</h3>
-              <input type="text" id="name" name="name"<br>
-              <h3>Subject</h3>
-              <input type="text" id="subject" name="subject"<br>
-              <h3>Organization</h3>
-              <input type="text" name="organization" id="organization">
-              <h3>Email</h3>
-              <input type="text" name="email" id="email">
-              <h3>Phone</h3>
-              <input type="text" name="phone" id="phone">
-              <h3>Message</h3>
-              <textarea id="message" name="message" rows="12" cols="100"></textarea><br><br>
-              <input type="submit" value="submit">
-              </form>
-            </div>
+          <br><a href="https://github.com/kmetscher">GitHub</a>
+          <p>Email</p>
+          <div id="emailbox">
+            <img src="images/emailsplit1.png"><img src="images/emailsplit2.png">
           </div>
+        </div>
       </div>
 
       <?php require_once('includes/sidebar.php')?>

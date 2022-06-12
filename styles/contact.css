@@ -10,7 +10,8 @@ h2 {
 
 p {
   color: inherit;
-  margin-left: 2vw;
+  padding-left: 0;
+  margin-left: 0;
   margin-right: 2vw;
 }
 
@@ -20,8 +21,8 @@ p {
   margin-bottom: 2vw;
 }
 
-#message {
-  max-width: 100%;
+.contact a {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 800px) {
@@ -35,7 +36,7 @@ p {
 
   p {
     color: inherit;
-    margin-left: 2vw;
+    margin-left: 0;
     margin-right: 2vw;
   }
 
@@ -43,9 +44,5 @@ p {
     padding: 3vw;
     background-color: black;
     margin-bottom: 2vw;
-  }
-
-  #message {
-    max-width: 99%;
   }
 }
