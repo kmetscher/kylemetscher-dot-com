@@ -21,9 +21,9 @@
         <h2>What is this website for?</h2>
         <p>This site primarily serves as a blog where I will post about vehicles I work on at the shop, mostly in a lessons-learned repair guide format. I will also post music and movie reviews, and updates about my personal projects, including work I do on the site itself. My intent is for it to become a living portfolio for colleagues, prospective employers, and those interested in collaborating to see what I'm up to.</p>
         <h2>How does this site work?</h2>
-        <p>I wrote and styled this site in HTML and CSS as a form of study for a web development course at Western Governors University. The site runs on an Apache installation on an AWS EC2 instance with a backend I wrote in PHP and mySQL. It is a perennial work in progress.</p><br>
+        <p>I wrote and styled this site in PHP, HTML, and CSS as a form of study for a web development course at Western Governors University. The site runs on an AWS Lightsail LAMP instance. It is a perennial work in progress.</p><br>
         <p>On the home page, the ten most recent posts appear as previews in publishing order. On the right-hand side of the page, a list of tags used to file posts under are in a scrollable list. As time goes on, posts made in a given month will appear under their respective entries in the archives. You can also filter posts by language.</p>
-        <img class="about" src="https://raw.githubusercontent.com/kmetscher/kylemetscher-dot-com/main/images/backstage.jpg">
+        <img class="about" src="images/mcmenamins.jpg">
         <p class="caption">Billiards at McMenamin's Backstage Bar in Portland, Oregon</p>
         <h2>What credentials do you hold?</h2>
         <p>I graduated with an Associate of Arts in general studies from Clark College in Vancouver, Washington, where I enrolled at 16 years old and received my degree at 18 as part of Washington State's "Running Start" program. I am a small motors technician. I am actively pursuing my Project+ and ITIL Foundation certifications.</p>
@@ -32,11 +32,11 @@
         <h2>What programming languages do you have experience with?</h2>
         <p>C/C++, PHP, Python, Rust, Ruby, Lua, JavaScript, and for a more liberal definition, HTML and CSS. The list is certain to grow.</p>
         <img class="about" src="images/lanchidbudaivar.jpg">
-        <p class="caption">A budai vár és a lánchíd éjszakán, Budapest, Magyarország</p>
+        <p class="caption">Buda Castle and the Chain Bridge at night, Budapest, Hungary</p>
         <h2>Beszél magyarul?</h2>
         <p>Igen! Budapesten éltem két évet. Sajnos nem olyan szépen beszélek mint igazi magyar, de kiprobálom mindenesetre.</p>
-        <h2>Van-e kedve, Magyarországra visszajönni?</h2>
-        <p>Természetesen igen. Ha Önnek van valamilyen információja vagy munkája nekem, kérlek, nézz a <a href="#">kapcsolati oldalt</a>.</p>
+        <h2>Sprechen Sie deutsch?</h2>
+        <p>Mein Großvater aus Berlin würde nein sagen, weil ich bin nach Wien gegangen zu viel Male.</p>
       </div>
 
     </div>
