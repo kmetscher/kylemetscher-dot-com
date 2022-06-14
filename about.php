@@ -37,7 +37,7 @@
         <h2>Beszél magyarul?</h2>
         <p>Igen! Budapesten éltem két évet. Sajnos nem olyan szépen beszélek mint igazi magyar, de kiprobálom mindenesetre.</p>
         <h2>Sprechen Sie deutsch?</h2>
-        <p>Mein Großvater aus Berlin würde nein sagen, weil ich bin nach Wien gegangen zu viel Male.</p>
+        <p>Mein Großvater aus Berlin würde nein sagen, weil ich zu oft nach Wien gereist bin, und deshalb nenne ich eine Tomate einen Paradeiser.</p>
       </div>
 
     </div>
