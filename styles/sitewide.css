@@ -10,6 +10,29 @@
   to {color: gray;}
 }
 
+@keyframes darkmodeclick {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+body {
+  background-color: white;
+}
+
+.dark {
+  background-color: #181b1c;
+}
+
+.darkheader {
+  padding: 10vw;
+  background-image: url(../images/paisano.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Archivo', sans-serif;
+}
+
 .header {
   padding: 10vw;
   background-image: url(../images/bonneville.jpg);
@@ -113,15 +136,80 @@ a:hover {
   flex-wrap: nowrap;
 }
 
+#darkmode {
+  height: 3vw;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+#darkmode input {
+  display: none;
+}
+
+#darkmodeswitch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url(../images/thesun.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#darkmodeswitch:active {
+  animation-name: darkmodeclick;
+  animation-duration: 0.5s;
+}
+
+input:checked ~ #darkmodeswitch {
+  position: absolute;
+  background-image: url(../images/themoon.png);
+}
+
 @media screen and (max-width: 800px) {
   .sidebar {
     padding: 1vw;
     background-color: black;
     flex-wrap: nowrap;
   }
+
   .sidebar h3 {
     margin-left: 2vw;
     margin-bottom: 0;
+  }
+
+  #darkmode {
+    margin-top: 2vw;
+    margin-left: 2vw;
+    height: 6vw;
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+
+  #darkmode input {
+    display: none;
+  }
+
+  #darkmodeswitch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url(../images/thesun.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  input:checked ~ #darkmodeswitch {
+    position: absolute;
+    background-image: url(../images/themoon.png);
+    left: 6vw;
   }
 }
 

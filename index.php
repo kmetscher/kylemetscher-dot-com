@@ -59,5 +59,6 @@
       </div>
 
     <?php require_once('includes/sidebar.php')?>
-
+<!-- SCRIPTS -->
   </body>
+</html>
