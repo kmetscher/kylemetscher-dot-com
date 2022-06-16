@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="scripts/darkmode.js"></script>
     <?php require_once('includes/connect.php');
           require_once('includes/headernav.php');
           $viewPostID = htmlspecialchars($_SERVER['QUERY_STRING']);

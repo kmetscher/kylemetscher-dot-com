@@ -6,6 +6,7 @@ $sideTagsAnswer = $conn->query($sideTagsQuery);
 $archiveQuery = "SELECT date FROM blog_posts ORDER BY date DESC";
 $archiveAnswer = $conn->query($archiveQuery);
 ?>
+
 <div class="sidebar">
   <h3>Brightness</h3>
   <label id="darkmode">
@@ -37,4 +38,3 @@ $archiveAnswer = $conn->query($archiveQuery);
     </ul>
   </div>
 </div>
-<script src="scripts/darkmode.js"></script>
