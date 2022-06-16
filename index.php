@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="scripts/darkmode.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta property="og:image" content="https://kylemetscher.com/images/bonneville.jpg"/>
@@ -59,5 +60,6 @@
       </div>
 
     <?php require_once('includes/sidebar.php')?>
-
+<!-- SCRIPTS -->
   </body>
+</html>

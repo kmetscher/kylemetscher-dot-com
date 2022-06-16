@@ -10,6 +10,29 @@
   to {color: gray;}
 }
 
+@keyframes darkmodeclick {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+body {
+  background-color: white;
+}
+
+.dark {
+  background-color: #181b1c;
+}
+
+.darkheader {
+  padding: 10vw;
+  background-image: url(../images/paisano.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Archivo', sans-serif;
+}
+
 .header {
   padding: 10vw;
   background-image: url(../images/bonneville.jpg);
@@ -33,6 +56,13 @@ h1 {
   display: inline;
 }
 
+#bgcaption {
+  background-color: black;
+  margin: 0;
+  padding: 1vw;
+  font-size: 1vw;
+}
+
 @media screen and (max-width: 800px) {
   h1 {
     color: white;
@@ -42,12 +72,18 @@ h1 {
     padding: 2.5vw;
     display: inline;
   }
+
+  #bgcaption {
+    display: none;
+  }
+
 }
 
 nav ul {
   font-size: 1.5vw;
   margin-top: 0;
   padding: 1vw;
+  padding-top: 0;
   background-color: black;
   list-style-type: none;
   display: flex;
@@ -113,15 +149,79 @@ a:hover {
   flex-wrap: nowrap;
 }
 
+#darkmode {
+  height: 3vw;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+#darkmode input {
+  display: none;
+}
+
+#darkmodeswitch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url(../images/thesun.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#darkmodeswitch:active {
+  animation-name: darkmodeclick;
+  animation-duration: 0.5s;
+}
+
+input:checked ~ #darkmodeswitch {
+  position: absolute;
+  background-image: url(../images/themoon.png);
+}
+
 @media screen and (max-width: 800px) {
   .sidebar {
     padding: 1vw;
     background-color: black;
     flex-wrap: nowrap;
   }
+
   .sidebar h3 {
     margin-left: 2vw;
     margin-bottom: 0;
+  }
+
+  #darkmode {
+    margin-top: 2vw;
+    margin-left: 2vw;
+    height: 6vw;
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+
+  #darkmode input {
+    display: none;
+  }
+
+  #darkmodeswitch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url(../images/thesun.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  input:checked ~ #darkmodeswitch {
+    position: absolute;
+    background-image: url(../images/themoon.png);
   }
 }
 
