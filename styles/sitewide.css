@@ -56,6 +56,13 @@ h1 {
   display: inline;
 }
 
+#bgcaption {
+  background-color: black;
+  margin: 0;
+  padding: 1vw;
+  font-size: 1vw;
+}
+
 @media screen and (max-width: 800px) {
   h1 {
     color: white;
@@ -65,12 +72,18 @@ h1 {
     padding: 2.5vw;
     display: inline;
   }
+
+  #bgcaption {
+    display: none;
+  }
+
 }
 
 nav ul {
   font-size: 1.5vw;
   margin-top: 0;
   padding: 1vw;
+  padding-top: 0;
   background-color: black;
   list-style-type: none;
   display: flex;
@@ -209,7 +222,6 @@ input:checked ~ #darkmodeswitch {
   input:checked ~ #darkmodeswitch {
     position: absolute;
     background-image: url(../images/themoon.png);
-    left: 6vw;
   }
 }
 
