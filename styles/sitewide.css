@@ -144,9 +144,13 @@ a:hover {
 
 .sidebar {
   padding: 1vw;
+  padding-bottom: 2vw;
   flex: 1 0 10vw;
   background-color: black;
   flex-wrap: nowrap;
+  align-self: flex-start;
+  position: sticky;
+  top: 1vw;
 }
 
 #darkmode {
@@ -187,6 +191,7 @@ input:checked ~ #darkmodeswitch {
     padding: 1vw;
     background-color: black;
     flex-wrap: nowrap;
+    align-self: stretch;
   }
 
   .sidebar h3 {
@@ -226,7 +231,7 @@ input:checked ~ #darkmodeswitch {
 }
 
 .tags {
-  max-height: 25vw;
+  max-height: 10vw;
   overflow: scroll;
   line-height: 1.5;
 }
@@ -255,7 +260,7 @@ ol.tags {
 }
 
 .archives {
-  max-height: 25vw;
+  max-height: 10vw;
   overflow: scroll;
   line-height: 1.5;
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>Image upload | Kyle Metscher</title>
+  <title>Image upload | Gutenberg</title>
   <?php require_once('../includes/connect.php'); ?>
 </head>
 <body>
