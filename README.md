@@ -1,6 +1,6 @@
 # kylemetscher-dot-com
 
-Contains the HTML, style sheets, and server-side files needed for my personal website. The site will be a blog where I upload posts about vehicles I work
+Contains the HTML, style sheets, scripts, and server-side files needed for my personal website. The site will be a blog where I upload posts about vehicles I work
 on at my current job, movie and music reviews, random thoughts, and updates on the site itself and other projects.
 
 Local testing is done via apache2 and mySQL installations on my personal computer.
@@ -32,7 +32,3 @@ Allowing a user to switch the entire interface to their language via the languag
 Functionalize PHP procedures and utilize scripts folder.
 
 Evaluate possibility of object-oriented paradigm.
-
-Host on Amazon Lightsail instance with LAMP stack.
-
-Actually write blog posts!
