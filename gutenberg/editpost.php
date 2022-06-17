@@ -1,5 +1,6 @@
 <head>
-<?php require_once('../includes/connect.php');?>
+  <title>Edit | Gutenberg</title>
+  <?php require_once('../includes/connect.php');?>
 </head>
 <body>
   <?php if($_SERVER['REQUEST_METHOD'] == "POST") { // grab the chosen post's extant data

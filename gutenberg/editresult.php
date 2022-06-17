@@ -1,5 +1,6 @@
 <head>
-<?php require_once('../includes/connect.php');?>
+  <title>Action | Gutenberg</title>
+  <?php require_once('../includes/connect.php');?>
 </head>
 <?php if($_SERVER['REQUEST_METHOD'] == "POST") {
   $updateAction = $_POST['actions'];

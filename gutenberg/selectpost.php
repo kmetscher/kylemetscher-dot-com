@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>Edit | Kyle Metscher</title>
+  <title>Select | Gutenberg</title>
   <?php require_once('../includes/connect.php'); ?>
 </head>
 <body>

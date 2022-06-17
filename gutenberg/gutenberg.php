@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>Gutenberg | Kyle Metscher</title>
+  <title>Gutenberg</title>
 </head>
 <body>
   <?php $heyGitHub = "can you stop labeling this as hacklang please"; ?>
