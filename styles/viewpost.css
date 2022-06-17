@@ -6,13 +6,15 @@ h2 {
   margin-left: 2vw;
   margin-right: 2vw;
   margin-top: 0;
-  margin-bottom: 1vw;
+  margin-bottom: 0;
 }
 
 p {
   font-size: 1.5vw;
   margin-left: 2vw;
   margin-right: 2vw;
+  line-height: 1.5;
+  text-align: justify;
 }
 
 .blogpost {
@@ -41,7 +43,9 @@ img.blogpost {
   margin-top: 0;
   font-size: 1vw;
   margin-left: 2vw;
-  margin-bottom: 2vw;
+  margin-bottom: 0;
+  align-self: center;
+  text-transform: uppercase;
 }
 
 .filedunder {
@@ -83,13 +87,18 @@ ol.tagbox {
     padding: 3vw;
     margin-left: 0;
     margin-right: 0;
+    padding-top: 2vw;
+    padding-bottom: 4vw;
   }
 
   p {
     font-size: 3.5vw;
     margin-left: 3vw;
     margin-right: 3vw;
-    margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 2vw;
+    line-height: 1.5;
+    text-align: justify;
   }
 
   .blogpost {
@@ -115,6 +124,7 @@ ol.tagbox {
     font-size: 3vw;
     margin-left: 2vw;
     margin-bottom: 2vw;
+    text-transform: uppercase;
   }
 
   .filedunder {
