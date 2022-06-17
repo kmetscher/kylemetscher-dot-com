@@ -24,6 +24,10 @@ p {
   flex-direction: column;
 }
 
+.blogpost a {
+  text-decoration: underline;
+}
+
 img.blogpost {
   object-fit: contain;
   max-height: 35vw;

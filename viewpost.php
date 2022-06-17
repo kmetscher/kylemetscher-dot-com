@@ -16,9 +16,9 @@
           $stmtTags->bind_param("i", $viewPostID);
           $stmtTags->execute();
           $postTagsAnswer = $stmtTags->get_result();
+          $titlePost = $viewPost['title'];?>
+          <title><?php echo strip_tags($titlePost);?> | Kyle Metscher</title>
 
-          echo '<title>'.$viewPost['title'].' | Kyle Metscher</title>';
-    ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta property="og:image" content="https://kylemetscher.com/<?php echo $viewPost['image'];?>"/>
