@@ -24,10 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo "<br>";
     print_r($_FILES);
   }
-  $fopenDir = $_SERVER['DOCUMENT_ROOT'] . '/trash/about.html';
-  if (fopen($fopenDir, 'x')) {
-    echo "<br><p>Fopen works</p>";
-  }
 }
 
 ?>
