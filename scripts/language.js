@@ -44,7 +44,7 @@ function inHungarian() {
   headerContact.textContent = "Kapcsolat";
   sidebarBrightness.textContent = "Napsütés";
   sidebarLanguages.textContent = "Nyelvek";
-  sidebarTags.textContent = "Temák";
+  sidebarTags.textContent = "Témák";
   sidebarArchives.textContent = "Archivum";
   // és soha ne felejtsd el!
   localStorage.setItem("language", "Hungarian");
