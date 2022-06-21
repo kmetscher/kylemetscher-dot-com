@@ -8,12 +8,12 @@ $archiveAnswer = $conn->query($archiveQuery);
 ?>
 
 <div class="sidebar">
-  <h3>Brightness</h3>
+  <h3 id="brightness">Brightness</h3>
   <label id="darkmode">
     <input type="checkbox" id="darkmodecheck">
     <span id="darkmodeswitch"></span>
   </label>
-  <a href="viewalltags.php"><h3>Tags</h3></a>
+  <a href="viewalltags.php"><h3 id="sidebartags">Tags</h3></a>
   <div class="tags">
     <ol class="tags">
     <?php
@@ -24,17 +24,17 @@ $archiveAnswer = $conn->query($archiveQuery);
       ?>
     </ol>
   </div>
-  <h3><a href="#">Archives</a></h3>
+  <h3 id="archives"><a href="#">Archives</a></h3>
   <div class="archives">
     <ol class="archives">
     </ol>
   </div>
-  <h3>Language</h3>
+  <h3 id="sidebarlanguages">Language</h3>
   <div class="languages">
     <ul class="languages">
-      <li><a href="viewlang.php?en">English</a></li>
-      <li><a href="viewlang.php?hu">Magyar</a></li>
-      <li><a href="viewlang.php?de">Deutsch</a></li>
+      <li><a href="#" id="en">English</a></li>
+      <li><a href="#" id="hu">Magyar</a></li>
+      <li><a href="#" id="de">Deutsch</a></li>
     </ul>
   </div>
 </div>
