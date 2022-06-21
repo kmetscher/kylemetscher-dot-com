@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // lightswitch event listener
   nightTime.addEventListener('click', () => {
     if (lightSwitch.checked == false) { // make sure we don't fall out of sync
+      darkHeaderGet = new XMLHttpRequest();
+      darkHeaderGet.open('GET', 'images/paisano.jpg');
+      darkHeaderGet.send();
       lightSwitch.checked = true;
       localStorage.setItem("brightness", "dark");
       body.setAttribute('class', 'dark');
@@ -30,6 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
       bgcaption.textContent = 'The bright red neon sign of the Hotel Paisano, built in 1929 to plans by Henry Trost, in Marfa, Texas';
     }
     else {
+      lightHeaderGet = new XMLHttpRequest();
+      lightHeaderGet.open('GET', 'images/bonneville.jpg');
+      lightHeaderGet.send();
       lightSwitch.checked = false;
       localStorage.setItem("brightness", "light");
       body.removeAttribute('class');
