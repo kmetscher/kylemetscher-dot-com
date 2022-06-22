@@ -25,8 +25,6 @@ Scripting the top header to become a slow slideshow of other photographs I've ta
 
 Sorting posts by month via archiveview.php page and archive sidebar.
 
-Edit/delete post backend functions
-
 Allowing a user to switch the entire interface to their language via the language sidebar option, as well as populate index.php with most recent posts in their chosen language.
 
 Functionalize PHP procedures and utilize scripts folder.

@@ -2,6 +2,7 @@
 <html>
   <head>
     <script src="scripts/darkmode.js"></script>
+    <script src="scripts/language.js"></script>
     <?php require_once('includes/connect.php');
           require_once('includes/headernav.php');
           $viewTagID = htmlspecialchars($_SERVER['QUERY_STRING']);
@@ -29,7 +30,7 @@
   <body>
     <div class="container">
       <div class="main">
-        <?php echo '<h2 id="tagline">Filed under "'.$tagName['name'].'"</h2>'; ?>
+        <h2 id="tagline"><?php echo $tagName['name'];?></h2>
           <?php
           // row by row, post IDs
           while($viewTagRow = $viewTagAnswer->fetch_assoc()) {
