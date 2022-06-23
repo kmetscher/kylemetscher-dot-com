@@ -56,6 +56,6 @@ function changeBrightness() {
 // add listeners on page load
 document.addEventListener('DOMContentLoaded', () => {
   initBrightness(); // set the user's preferred brightness right away
-  const nightTime = document.getElementById('darkmodeswitch');
+  const nightTime = document.getElementById('darkmodecheck');
   nightTime.addEventListener('click', changeBrightness); // and listen in on the sun and moon
 });
