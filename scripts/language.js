@@ -6,6 +6,22 @@ function getElements() {
   sidebarLanguages = document.getElementById('sidebarlanguages');
   sidebarTags = document.getElementById('sidebartags');
   sidebarArchives = document.getElementById('archives');
+  filedUnder = document.querySelectorAll('.filedunder p');
+  if (document.querySelector('.contact h2') != null) {
+    contactHeader = document.querySelector('.contact h2');
+  } else {
+    contactHeader = null;
+  }
+  if (document.querySelector('.about h2') != null) {
+    aboutHeader = document.querySelector('.about h2');
+  } else {
+    aboutHeader = null;
+  }
+  if (document.getElementById('tagboxunder') != null) {
+    tagsUnder = document.getElementById('tagboxunder');
+  } else {
+    tagsUnder = null;
+  }
 }
 
 function inEnglish() {
@@ -18,6 +34,15 @@ function inEnglish() {
   sidebarLanguages.textContent = "Languages";
   sidebarTags.textContent = "Tags";
   sidebarArchives.textContent = "Archives";
+  if (contactHeader != null) {
+    contactHeader.textContent = "Contact";
+  }
+  if (aboutHeader != null) {
+    aboutHeader.textContent = "About";
+  }
+  if (tagsUnder != null) {
+    tagsUnder.textContent = "Filed under:";
+  }
   // and don't you forget it!
   localStorage.setItem("language", "English");
 }
@@ -32,6 +57,15 @@ function inGerman() {
   sidebarLanguages.textContent = "Sprache";
   sidebarTags.textContent = "Tags";
   sidebarArchives.textContent = "Archiv";
+  if (contactHeader != null) {
+    contactHeader.textContent = "Kontakt";
+  }
+  if (aboutHeader != null) {
+    aboutHeader.textContent = "Über";
+  }
+  if (tagsUnder != null) {
+    tagsUnder.textContent = "Mit dieser Tags:";
+  }
   // vergessen Sie das einfach nicht!
   localStorage.setItem("language", "German");
 }
@@ -46,6 +80,15 @@ function inHungarian() {
   sidebarLanguages.textContent = "Nyelvek";
   sidebarTags.textContent = "Témák";
   sidebarArchives.textContent = "Archivum";
+  if (contactHeader != null) {
+    contactHeader.textContent = "Elérhetőség";
+  }
+  if (aboutHeader != null) {
+    aboutHeader.textContent = "Erről az oldalról";
+  }
+  if (tagsUnder != null) {
+    tagsUnder.textContent = "Ezekkel a témákkal:";
+  }
   // és soha ne felejtsd el!
   localStorage.setItem("language", "Hungarian");
 }

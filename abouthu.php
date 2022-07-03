@@ -16,19 +16,19 @@
     <div class="main">
 
       <div class="about">
-        <h2 class="about">About</h2>
-        <img class="about" src="images/bigboyfortworth.jpg" alt="A photo of the author with the Big Boy locomotive in Fort Worth, Texas in the background">
-        <p class="caption" name="caption" id="bigboy">With the Big Boy locomotive in Fort Worth, Texas</p>
-        <h2>Who are you?</h2>
-        <p>I'm Kyle Metscher, a student of Computer Science at Western Governors University. More casually, I study linguistics, music, history, and art.</p>
-        <p>You can reach me via the <a href="contact.php">contact page.</a></p>
-        <h2>What is this website for?</h2>
-        <p>This site is a blog. I will post music and movie reviews, thoughts on various subjects of interest, and most importantly, about the work I do on the site itself. My intent is for it to become a living portfolio for colleagues, prospective employers, and those interested in collaborating to see what I'm up to.</p>
-        <h2>How does this site work?</h2>
-        <p>This site is powered by PHP, HTML, CSS, and a slowly increasing amount of JavaScript. The site's implementations are, as of now, all "vanilla" -- I did not use any frameworks or external libraries, and instead built from the ground up in a Sisyphean exercise of reinventing the wheel. The site was born as a form of study for a web development course at Western Governors University and runs on an AWS Lightsail LAMP instance. It is a perennial work in progress.</p>
-        <p>You can navigate the site with the nav header on the top of the page, and through the sidebar menu (on desktop) or footer menu (on mobile).</p>
-        <img class="about" src="images/mcmenamins.jpg" alt="A photo of the author playing billiards in a dimly-lit bar">
-        <p class="caption">Billiards at McMenamin's Backstage Bar in Portland, Oregon</p>
+        <h2 class="about">Erről az oldalról</h2>
+        <img class="about" src="images/bigboyfortworth.jpg" alt="Egy kép az íróról a &quotBig Boy&quot vonattal Fort Worth, Texasban">
+        <p class="caption" name="caption" id="bigboy">A "Big Boy" vonattal Fort Worth, Texasban</p>
+        <h2>Ki vagy?</h2>
+        <p>Kyle Metscher vagyok, egy informátikus diák a Western Governors Egyetemen az Egyesült Államokban. Informálisan tanulom is a nyelvészetet, zenét, törtenét, meg a müvészetet.</p>
+        <p>A <a href="contact.php">kapcsolati oldalon</a> találhatóak az elérhetőségeim.</p>
+        <h2>Ennek az oldalnak mi a célja?</h2>
+        <p>Ez egy blog. Ide fogok posztolni a filmekről és a zenéről, a gondolataim különböző dolgokról, és legfontosabban ez az oldal fejlődéséről. Az én célem vele az, hogy itt találhatóak a mostani projekteim és tevékenységeim munkaadóknak, a barataimnak, és kollégaimnak.</p>
+        <h2>Hogyan működik ez az oldal?</h2>
+        <p>Ez az oldal használja a PHP-t, HTML-t, CSS-t, és JavaScript-et. Most nem használok semmi framework-eket; inkább megírtam az összes oldalt egyedül a tanulás kedveért. Egy AWS Lightsail LAMP VM-en él. Folyamatosan dolgozom vele!</p>
+        <p>A főkép alatt van a navigáció menü. Ha Ön desktopon lenne, jobbra találna tóvabbi opciókat. Ha mobilon lenne, ezek az opciók az alján találhatóak.</p>
+        <img class="about" src="images/mcmenamins.jpg" alt="Egy kép az íróról biliárdozás közben">
+        <p class="caption">Biliárdozás at McMenamin's Backstage Bar-ban Portland, Oregonban</p>
         <h2>What credentials do you hold?</h2>
         <p>I graduated with an Associate of Arts in general studies from Clark College in Vancouver, Washington, where I enrolled at 16 years old and received my degree at 18 as part of Washington State's "Running Start" program. I am a small motors technician. I am actively pursuing my Project+ and ITIL Foundation certifications. Most importantly, I may claim the bespoke distinction of holding a food handler's card in both Washington <i>and</i> Texas.</p>
         <h2>What work experience do you have?</h2>

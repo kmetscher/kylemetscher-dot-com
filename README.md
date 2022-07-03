@@ -15,18 +15,14 @@ POST method querying for viewing posts, by tag, and by language tested with sqlm
 
 Current challenges:
 
-Archiving by month
+Using arrays of returned DOM elements in JavaScript to apply language changes across dynamic content
 
 Future plans:
+
+Vue? Laravel?
 
 Collapse stylesheets
 
 Scripting the top header to become a slow slideshow of other photographs I've taken.
 
-Sorting posts by month via archiveview.php page and archive sidebar.
-
-Allowing a user to switch the entire interface to their language via the language sidebar option, as well as populate index.php with most recent posts in their chosen language.
-
-Functionalize PHP procedures and utilize scripts folder.
-
-Evaluate possibility of object-oriented paradigm.
+Flesh out language UI change script
