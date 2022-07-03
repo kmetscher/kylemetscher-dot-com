@@ -17,6 +17,11 @@ function getElements() {
   } else {
     aboutHeader = null;
   }
+  if (document.getElementById('tagboxunder') != null) {
+    tagsUnder = document.getElementById('tagboxunder');
+  } else {
+    tagsUnder = null;
+  }
 }
 
 function inEnglish() {
@@ -34,6 +39,9 @@ function inEnglish() {
   }
   if (aboutHeader != null) {
     aboutHeader.textContent = "About";
+  }
+  if (tagsUnder != null) {
+    tagsUnder.textContent = "Filed under:";
   }
   // and don't you forget it!
   localStorage.setItem("language", "English");
@@ -55,6 +63,9 @@ function inGerman() {
   if (aboutHeader != null) {
     aboutHeader.textContent = "Über";
   }
+  if (tagsUnder != null) {
+    tagsUnder.textContent = "Mit dieser Tags:";
+  }
   // vergessen Sie das einfach nicht!
   localStorage.setItem("language", "German");
 }
@@ -74,6 +85,9 @@ function inHungarian() {
   }
   if (aboutHeader != null) {
     aboutHeader.textContent = "Erről az oldalról";
+  }
+  if (tagsUnder != null) {
+    tagsUnder.textContent = "Ezekkel a témákkal:";
   }
   // és soha ne felejtsd el!
   localStorage.setItem("language", "Hungarian");
