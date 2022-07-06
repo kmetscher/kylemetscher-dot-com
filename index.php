@@ -38,7 +38,7 @@
               echo '</div>';
 
               echo '<div class="filedunder">';
-                echo '<p>Filed under:</p>';
+                echo '<p id="tagboxunder">Filed under:</p>';
                 echo '<ol class="tagbox">';
 
                 // fetch tags via left join on post_tags and tags tables with passed post ID
