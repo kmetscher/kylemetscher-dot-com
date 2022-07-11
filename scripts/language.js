@@ -18,10 +18,18 @@ function getElements() {
     aboutHeader = null;
   }
   if (document.getElementById('tagboxunder') != null) {
-    tagsUnder = document.getElementById('tagboxunder');
+    tagsUnder = document.querySelectorAll('#tagboxunder');
   } else {
     tagsUnder = null;
   }
+}
+
+function tagsText(tagsList, newText) {
+  tagsList.forEach(
+    function(node) {
+      node.textContent = this;
+    },
+  newText);
 }
 
 function inEnglish() {
@@ -41,7 +49,7 @@ function inEnglish() {
     aboutHeader.textContent = "About";
   }
   if (tagsUnder != null) {
-    tagsUnder.textContent = "Filed under:";
+    tagsText(tagsUnder, "Filed under:");
   }
   // and don't you forget it!
   localStorage.setItem("language", "English");
@@ -64,7 +72,7 @@ function inGerman() {
     aboutHeader.textContent = "Über";
   }
   if (tagsUnder != null) {
-    tagsUnder.textContent = "Mit dieser Tags:";
+    tagsText(tagsUnder, "Mit dieser Tags:");
   }
   // vergessen Sie das einfach nicht!
   localStorage.setItem("language", "German");
@@ -87,7 +95,7 @@ function inHungarian() {
     aboutHeader.textContent = "Erről az oldalról";
   }
   if (tagsUnder != null) {
-    tagsUnder.textContent = "Ezekkel a témákkal:";
+    tagsText(tagsUnder, "Ezekkel a témákkal:");
   }
   // és soha ne felejtsd el!
   localStorage.setItem("language", "Hungarian");

@@ -38,7 +38,7 @@
                 echo "{$viewPost['body']}";
           ?>
         <div class="filedunder">
-          <p>Filed under:</p>
+          <p id="tagboxunder">Filed under:</p>
           <ol class="tagbox">
             <?php
             while($postTagsRow = $postTagsAnswer->fetch_assoc()) {

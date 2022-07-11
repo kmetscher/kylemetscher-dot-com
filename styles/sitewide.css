@@ -257,6 +257,12 @@ ol.tags {
     padding-left: 0;
     margin: 0;
   }
+  .archives {
+    list-style-type: none;
+    list-style: none;
+    padding-left: 2vw;
+    padding-top: 1vw;
+  }
 }
 
 .archives {

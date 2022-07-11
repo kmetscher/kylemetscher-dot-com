@@ -15,7 +15,7 @@ POST method querying for viewing posts, by tag, and by language tested with sqlm
 
 Current challenges:
 
-Using arrays of returned DOM elements in JavaScript to apply language changes across dynamic content
+~smooth sailing~
 
 Future plans:
 

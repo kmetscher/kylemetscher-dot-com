@@ -2,6 +2,7 @@
 <html>
   <head>
     <script src="scripts/darkmode.js"></script>
+    <script src="scripts/language.js"></script>
     <?php require_once('includes/connect.php');
           require_once('includes/headernav.php');
           require_once('scripts/scripts.php');
