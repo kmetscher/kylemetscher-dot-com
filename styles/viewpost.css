@@ -120,8 +120,9 @@ ol.tagbox {
 
   .caption {
     margin-top: 0;
-    font-size: 3vw;
-    margin-left: 2vw;
+    font-size: 2vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
     margin-bottom: 2vw;
     text-transform: uppercase;
   }

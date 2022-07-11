@@ -75,9 +75,9 @@ function displayPostPreviewByID($postID, $mysql) {
 }
 
 function displayIndexPosts($mysql) {
-  $allPostsQuery = "SELECT id FROM blog_posts ORDER BY id LIMIT 10";
+  $allPostsQuery = "SELECT id FROM blog_posts ORDER BY id DESC LIMIT 10";
   $stmtAllPosts = $mysql->prepare($allPostsQuery); $stmtAllPosts->execute();
-  $allPostsAnswer = $stmtAllPosts->get_results();
+  $allPostsAnswer = $stmtAllPosts->get_result();
   while ($row = $allPostsAnswer->fetch_assoc()) {
     $currentID = $row['id'];
     displayPostPreviewByID($currentID, $mysql);
